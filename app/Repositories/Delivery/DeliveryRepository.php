@@ -28,12 +28,9 @@ class DeliveryRepository extends BaseRepository implements DeliveryRepositoryInt
         return $this->model->all();
     }
 
-    public function save($attributes, $id)
+    public function update($attributes, $id)
     {
-        $delivery = $this->model->where('id', $id)->first();
-        $delivery->title = $attributes['title'];
-        $delivery->date_time = $attributes['date_time'];
-        $delivery->save();
+        $delivery = $this->model->where('id', $id)->update($attributes);
     }
 
     public function destroy($id)

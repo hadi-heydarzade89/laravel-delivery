@@ -8,7 +8,7 @@ interface DeliveryRepositoryInterface
 {
     public function all();
 
-    public function save($attributes, $id);
+    public function update($attributes, $id);
 
     public function destroy($id);
 }

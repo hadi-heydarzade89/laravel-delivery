@@ -74,7 +74,7 @@ class APIDeliveryController extends BaseController
      */
     public function update(StoreDeliveryRequest $request, $id)
     {
-        $this->deliveryRepository->save($request->all(), $id);
+        $this->deliveryRepository->update($request->all(), $id);
         return $this->response([
             'status' => true,
             'message' => 'successful',
